@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Base Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0f0f1a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1b1b2f;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      text-align: center;
+      color: #7f7fff;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: #252538;
+      color: #fff;
+    }
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+    .section {
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      margin-top: 20px;
+    }
+    .employee {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .employee input {
+      flex: 1;
+    }
+    .radio-group {
+      margin-top: 10px;
+    }
+    .radio-group label {
+      margin-right: 15px;
+      font-weight: normal;
+    }
+    .photo-upload {
+      border: 2px dashed #555;
+      border-radius: 10px;
+      text-align: center;
+      padding: 30px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #7f7fff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6565ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DATA BASE</h1>
+    
+    <!-- Основні дані -->
+    <div class="section">
+      <h2>Основні дані</h2>
+      <label>Static ID:</label>
+      <input type="text" placeholder="Введіть Static ID">
+      
+      <label>ПІБ матеріального:</label>
+      <input type="text" placeholder="Прізвище, Ім'я">
+      
+      <label>Організація:</label>
+      <select>
+        <option>Оберіть організацію</option>
+        <option>Організація 1</option>
+        <option>Організація 2</option>
+      </select>
+    </div>
+    
+    <!-- Учасники процесуальних дій -->
+    <div class="section">
+      <h2>Учасники процесуальних дій</h2>
+      <div class="employee">
+        <input type="text" placeholder="Static ID">
+        <input type="text" placeholder="ПІБ співробітника">
+      </div>
+      <div class="employee">
+        <input type="text" placeholder="Static ID">
+        <input type="text" placeholder="ПІБ співробітника">
+      </div>
+      <div class="employee">
+        <input type="text" placeholder="Static ID">
+        <input type="text" placeholder="ПІБ співробітника">
+      </div>
+      <div class="employee">
+        <input type="text" placeholder="Static ID">
+        <input type="text" placeholder="ПІБ співробітника">
+      </div>
+      <div class="employee">
+        <input type="text" placeholder="Static ID">
+        <input type="text" placeholder="ПІБ співробітника">
+      </div>
+    </div>
+    
+    <!-- Інкриміновані статті -->
+    <div class="section">
+      <h2>Інкриміновані статті та додаткова інформація</h2>
+      <label>Стаття, що інкримінується:</label>
+      <textarea placeholder="Введіть статті кримінального кодексу"></textarea>
+      
+      <div class="radio-group">
+        <label>Вилуч. під заставу:</label>
+        <label><input type="radio" name="bail" value="yes"> Так</label>
+        <label><input type="radio" name="bail" value="no"> Ні</label>
+      </div>
+      
+      <div class="radio-group">
+        <label>Наявність судимості:</label>
+        <label><input type="radio" name="criminal" value="yes"> Так</label>
+        <label><input type="radio" name="criminal" value="no"> Ні</label>
+      </div>
+    </div>
+    
+    <!-- Фото -->
+    <div class="section">
+      <h2>Фоторобот або фотографія</h2>
+      <div class="photo-upload">
+        Натисніть для завантаження фото
+      </div>
+    </div>
+    
+    <button>Надіслати до бази даних</button>
+  </div>
+</body>
+</html>
